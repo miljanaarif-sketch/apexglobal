@@ -1,0 +1,4 @@
+serve.ps1
+serve.bat
+.env
+*.env
