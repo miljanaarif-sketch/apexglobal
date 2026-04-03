@@ -750,6 +750,118 @@
       color: var(--text-muted);
     }
 
+    /* ── CONTACT ── */
+    #contact {
+      background: #4a7c00;
+      padding: 80px 5%;
+    }
+
+    .contact-header { margin-bottom: 52px; }
+    .contact-header .section-title { color: #fff; letter-spacing: -1px; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 36px; }
+
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 40px;
+    }
+
+    .contact-item {}
+
+    .contact-item-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .contact-item-icon {
+      width: 32px; height: 32px;
+      background: #fff;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .contact-item-value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+      padding-left: 42px;
+    }
+
+    .contact-item-value a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+
+    .contact-item-value a:hover { color: #fff; text-decoration: underline; }
+
+    /* Form */
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      outline: none;
+      transition: box-shadow 0.2s;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: #aaa; }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.4); }
+
+    .contact-form textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .contact-form .btn-submit {
+      align-self: flex-start;
+      background: #fff;
+      color: #4a7c00;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .contact-form .btn-submit:hover {
+      background: #f0f0f0;
+      transform: translateY(-1px);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .hero-visual { display: none; }
@@ -760,6 +872,7 @@
       .process-steps::before { display: none; }
       .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     }
 
     @media (max-width: 640px) {
@@ -773,6 +886,8 @@
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
       .cta-inner { padding: 48px 28px; }
       #about { padding: 60px 5%; }
+      .contact-form-row { grid-template-columns: 1fr; }
+      .contact-info-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -789,7 +904,8 @@
       <li><a href="#about">About</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#testimonials">Clients</a></li>
-      <li><a href="#cta" class="nav-cta">Get Started</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get Started</a></li>
     </ul>
     <div class="hamburger" onclick="this.classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -1022,6 +1138,79 @@
         <a href="mailto:contact@apexglobal.me" class="btn-primary">Schedule a Call</a>
         <a href="#services" class="btn-secondary">View Services</a>
       </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-header">
+      <h2 class="section-title">Contact Us</h2>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Left: contact info -->
+      <div class="contact-info">
+        <div class="contact-info-grid">
+          <div class="contact-item">
+            <div class="contact-item-header">
+              <div class="contact-item-icon">📍</div>
+              Our Address
+            </div>
+            <div class="contact-item-value">Apex Global,<br />Saudi Arabia</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-header">
+              <div class="contact-item-icon">📞</div>
+              Phone
+            </div>
+            <div class="contact-item-value">
+              <a href="tel:+966553597489">+966 55 359 7489</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-header">
+              <div class="contact-item-icon">📱</div>
+              Whatsapp
+            </div>
+            <div class="contact-item-value">
+              <a href="https://wa.me/966553597489" target="_blank">+966 55 359 7489</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-header">
+              <div class="contact-item-icon">✉️</div>
+              Our Email
+            </div>
+            <div class="contact-item-value">
+              <a href="mailto:info@apexglobal.com">info@apexglobal.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: inquiry form via FormSubmit (free, no backend needed) -->
+      <form
+        class="contact-form"
+        action="https://formsubmit.co/mdmiljan@yahoo.com"
+        method="POST"
+      >
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="New Inquiry — Apex Global Website" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://miljanaarif-sketch.github.io/apexglobal/?sent=1" />
+
+        <div class="contact-form-row">
+          <input type="text"  name="first_name" placeholder="First Name:" required />
+          <input type="text"  name="last_name"  placeholder="Last Name:"  required />
+        </div>
+        <div class="contact-form-row">
+          <input type="email" name="email" placeholder="Email:" required />
+          <input type="tel"   name="phone" placeholder="Phone:" />
+        </div>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
     </div>
   </section>
 
